@@ -1,87 +1,84 @@
-# Project Title
+# Myalert
 
-One Paragraph of project description goes here
+A simple Bootsrap alert using Jquery Library
 
-## Getting Started
+### Prepare Some Stuff
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+<p>Before using Myalert, <strong>First</strong> you must add Bootstrap css and Jquery library script to your project.</p>
 
-### Prerequisites
+<p>Bootstrap v3.x.x or higher</p>
 
-What things you need to install the software and how to install them
+<p>Jquery v1.7 or higher</p>
 
-```
-Give examples
-```
+<p><strong>Second</strong>, load myalert.css and myalert.js to your project. you can find this files inside <a href="https://github.com/banutri/Myalert/tree/main/css">css</a> and <a href="https://github.com/banutri/Myalert/tree/main/js">js</a> folder.</p>
+<p><strong>Third</strong>, add these code inside body tag</p>
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+```html
+<div class="myalert"></div>
 ```
 
-And repeat
+<p><strong>Fourth</strong>, initialize with these code </p>
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```html
+<script>
+   Myalert({
+    type:"success",
+    timeout:1000,
+    message:"Hi!, I'm simple alert"
+  })
+</script>
 ```
 
-### And coding style tests
+### The Properties
 
-Explain what these tests test and why
+There are 5 properties you can use for configuring Myalert
+- type
+- timeout
+- message
+- slideDown
+- slideUp
+
+#### type Property
+type property is a type of alert according to Bootstrap color. You can use success, warning, danger, info and primary for coloring the background of alert. If you choose none of them, the color will be dark.
+example :
 
 ```
-Give an example
+type:"success",
 ```
 
-## Deployment
+#### timeout Property
+timeout property is a how long alert for dissapear in milisecond. leave it empty for default (1000ms). 
+example :
 
-Add additional notes about how to deploy this on a live system
+```
+timeout:2000,
+```
 
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+#### message Property
+message property is a message inside the alert.
+example :
 
-## Contributing
+```
+message:"Hello world",
+```
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+#### slideDown Property
+slideDown property is a how long alert for sliding down in milisecond. leave it empty for default (500ms). 
+example :
 
-## Versioning
+```
+slideDown:1000,
+```
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+#### slideDown Property
+slideDown property is a how long alert for sliding up in milisecond. leave it empty for default (500ms). 
+example :
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+```
+slideUp:1000,
+```
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
